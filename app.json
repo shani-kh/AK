@@ -41,31 +41,31 @@
     
     "ALWAYS_ONLINE": {
       "description": "Make it true if want always online.",
-      "required": false,
+      "required": true,
       "value": "false"  
     },
     
     "AUTO_BIO": {
       "description": "Make it true if want auto about changing.",
-      "required": false,
+      "required": true,
       "value": "false"  
     },    
   
     "AUTO_VOICE": {
       "description": "Make it true if want automatic voice reply .",
-      "required": false,
+      "required": true,
       "value": "false"
     }, 
 
     "AUTO_REPLY": {
       "description": "Make it true if you want automatic reply.",
-      "required": false,
+      "required": true,
       "value": "false"
     }, 
 
     "AUTO_STICKER": {
       "description": "Make it true if you want automatic sticker.",
-      "required": false,
+      "required": true,
       "value": "false"
     }, 
 
@@ -110,56 +110,56 @@
     
     "ANTI_LINK": {
       "description": "Make it true if you want bot auto remove group link.",
-      "required": false,
+      "required": true,
       "value": "false"
     },
     
     "ADMIN_EVENTS": {
       "description": "make it true if want know who promote or demote a member .",
-      "required": false,
+      "required": true,
       "value": "false"
     },
 
     "WELCOME": {
       "description": "make it true if want goodbye and welcome message in groups.",
-      "required": false,
+      "required": true,
       "value": "false"
     },
      
     "ANTI_CALL": {
       "description": "Make it true if you want bot auto call rejected.",
-      "required": false,
+      "required": true,
       "value": "false"
       
     }, 
     
     "ANTI_BAD_WORD": {
       "description": "Make it true if you want bot auto delete bad words.",
-      "required": false,
+      "required": true,
       "value": "false"
     }, 
     
     "AUTO_RECORDING": {
       "description": "Make it true if you want auto recoding.",
-      "required": false,
+      "required": true,
       "value": "false"
     },
 
     "AUTO_TYPING": {
       "description": "Make it true if you want auto typing.",
-      "required": false,
+      "required": true,
       "value": "false"
     },
 
     "AUTO_REACT": {
       "description": "Make it true if you want react on every message.",
-      "required": false,
+      "required": true,
       "value": "false"
     },
     
     "CUSTOM_REACT": {
       "description": "Make it true if you want custom reactions.",
-      "required": false,
+      "required": true,
       "value": "false"
       
     }, 
@@ -173,12 +173,12 @@
     "ANTI_DEL_PATH": {
       "description": "change it to -same- if you want to resend deleted message in same chat",
       "required": false,
-      "value": "same"
+      "value": "log"
     }, 
 
     "READ_MESSAGE": {
       "description": "Make it true if you want bot read your all sms just now.",
-      "required": false,
+      "required": true,
       "value": "false"
     }
 
