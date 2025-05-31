@@ -194,6 +194,8 @@ _________________________
 ➤ 👑 .owner || Public Use 
 ➤ 👑 .broadcast ×
 ➤ 👑 .siminfo || Bot User 
+➤ 👑 .sim || Bot User
+➤ 👑 .sim2 || Bot User 
 ➤ 👑 .ping || Public Use
 ➤ 👑 .speed || Public Use
 ➤ 👑 .fetch || Public Use
