@@ -104,12 +104,12 @@
      
     "DELETE_LINK": {
       "description": "Make it true if you want bot auto remove group link.",
-      "required": false,
+      "required": true,
       "value": "false"
     }, 
     
     "ANTI_LINK": {
-      "description": "Make it true if you want bot auto remove group link.",
+      "description": "Make it true if you want bot auto kick member remove group link.",
       "required": true,
       "value": "false"
     },
@@ -171,10 +171,16 @@
     }, 
     
     "ANTI_DEL_PATH": {
-      "description": "change it to -same- if you want to resend deleted message in same chat",
-      "required": false,
-      "value": "log"
-    }, 
+      "description": "change it to -same- if you want to resend deleted message in same chat othwise inbox",
+      "required": true,
+      "value": "inbox"
+    },
+
+    "ANTI_DELETE": {
+      "description": "set true for show deleted messages.",
+      "required": true,
+      "value": "false"  
+    },
 
     "READ_MESSAGE": {
       "description": "Make it true if you want bot read your all sms just now.",
