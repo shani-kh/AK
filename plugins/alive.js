@@ -13,7 +13,7 @@ cmd({
 },
 async (conn, mek, m, { from, sender, reply }) => {
     try {
-        const status = ` *📡SHABAN MD V5 WHATSAPP📡*
+        const status = ` *📡SHABAN MD V5📡*
 
 ✅ *Status:* Active  
 👑 *Owner:* ${config.OWNER_NAME}  
