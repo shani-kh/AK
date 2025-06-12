@@ -13,7 +13,7 @@ cmd({
 },
 async (conn, mek, m, { from, sender, reply }) => {
     try {
-        const status = ` *📡SHABAN MD V5📡*
+        const status = ` *📡 SHABAN MD V5*
 
 ✅ *Status:* Active  
 👑 *Owner:* ${config.OWNER_NAME}  
@@ -27,7 +27,7 @@ __________________________________
 ${config.DESCRIPTION}`;
 
         await conn.sendMessage(from, {
-            image: { url: config.MENU_IMAGE_URL },
+            image: { url: "https://i.ibb.co/nqRfh0SB/shaban-md.jpg" },
             caption: status,
             contextInfo: {
                 mentionedJid: [m.sender],
