@@ -80,7 +80,7 @@ console.log("Session downloaded ✅")
 
 const express = require("express");
 const app = express();
-const port = process.env.PORT || 9090;
+const port = process.env.PORT || 3000;
   
   //=============================================
   
@@ -994,4 +994,4 @@ app.listen(port, () => console.log(`Server listening on port http://localhost:${
 
 setTimeout(() => {
   connectToWA();
-}, 4000);
+}, 3000);
