@@ -6,7 +6,7 @@ const config = require('../config');
 cmd({
     pattern: "alive",
     alias: ["status", "uptime", "a"],
-    desc: "Check bot is alive or not",
+    desc: "Check if the bot is online and active",
     category: "main",
     react: "⚡",
     filename: __filename
@@ -14,18 +14,21 @@ cmd({
 async (conn, mek, m, { from, sender, reply }) => {
     try {
         const status = `
-╭───〔 *🤖 ${config.BOT_NAME} STATUS* 〕───◉
-│✨ *Bot is Active & Online!*
-│
-│🧠 *Owner:* ${config.OWNER_NAME}
-│⚡ *Version:* 3.0.0
-│📝 *Prefix:* [${config.PREFIX}]
-│📳 *Mode:* [${config.MODE}]
-│💾 *RAM:* ${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)}MB / ${(os.totalmem() / 1024 / 1024).toFixed(2)}MB
-│🖥️ *Host:* ${os.hostname()}
-│⌛ *Uptime:* ${runtime(process.uptime())}
-╰─────────────◉
-> ${config.DESCRIPTION}`;
+┏━━━━━━━━━━━━━━━⬣
+┃     ⚡ *DIGITAL LOK ONLINE* ⚡
+┗━━━━━━━━━━━━━━━⬣
+
+✅ *Bot Status:* 𝗔𝗖𝗧𝗜𝗩𝗘 & 𝗥𝗘𝗦𝗣𝗢𝗡𝗗𝗜𝗡𝗚
+👑 *Owner:* ${config.OWNER_NAME}
+🧩 *Version:* 3.0.0
+🎯 *Mode:* [${config.MODE}]
+🎛️ *Prefix:* [${config.PREFIX}]
+💾 *RAM:* ${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)}MB / ${(os.totalmem() / 1024 / 1024).toFixed(2)}MB
+🖥️ *Host:* ${os.hostname()}
+⏱️ *Uptime:* ${runtime(process.uptime())}
+
+🔗 *Powered by:* 𝗗𝗜𝗚𝗜𝗧𝗔𝗟 𝗟𝗢𝗞
+┗━━━━━━━━━━━⬣`;
 
         await conn.sendMessage(from, {
             image: { url: config.MENU_IMAGE_URL },
@@ -36,7 +39,7 @@ async (conn, mek, m, { from, sender, reply }) => {
                 isForwarded: true,
                 forwardedNewsletterMessageInfo: {
                     newsletterJid: '120363358310754973@newsletter',
-                    newsletterName: 'SHABAN-MD-V5',
+                    newsletterName: 'SHABAN MD',
                     serverMessageId: 143
                 }
             }
@@ -44,6 +47,6 @@ async (conn, mek, m, { from, sender, reply }) => {
 
     } catch (e) {
         console.error("Alive Error:", e);
-        reply(`An error occurred: ${e.message}`);
+        reply(`❌ Error: ${e.message}`);
     }
 });
