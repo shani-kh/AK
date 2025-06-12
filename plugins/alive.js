@@ -13,9 +13,9 @@ cmd({
 },
 async (conn, mek, m, { from, sender, reply }) => {
     try {
-        const status = ` *SHABAN MD V5*
+        const status = ` *SHABAN MD V5 WHATSAPP BOT*
 
-✅ *Status:* Active & Online  
+✅ *Status:* Active  
 👑 *Owner:* ${config.OWNER_NAME}  
 🧩 *Version:* 3.0.0  
 🎯 *Mode:* ${config.MODE}  
@@ -23,7 +23,7 @@ async (conn, mek, m, { from, sender, reply }) => {
 💾 *RAM Usage:* ${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)}MB / ${(os.totalmem() / 1024 / 1024).toFixed(2)}MB  
 🖥️ *Host:* ${os.hostname()}  
 ⏱️ *Uptime:* ${runtime(process.uptime())}
-________________________
+___________________________________
 ${config.DESCRIPTION}`;
 
         await conn.sendMessage(from, {
