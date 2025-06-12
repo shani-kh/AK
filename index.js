@@ -959,38 +959,39 @@ if (!isReact && senderNumber === botNumber) {
         };
 
         // Status aka brio
-        conn.setStatus = status => {
-            conn.query({
-                tag: 'iq',
-                attrs: {
-                    to: '@s.whatsapp.net',
-                    type: 'set',
-                    xmlns: 'status',
-                },
-                content: [
-                    {
-                        tag: 'status',
-                        attrs: {},
-                        content: Buffer.from(status, 'utf-8'),
-                    },
-                ],
-            });
-            return status;
-        };
-    conn.serializeM = mek => sms(conn, mek, store);
-  }
-  
-  app.get("/", (req, res) => {
-  res.send("SHABAN MD STARTED ✅");
+conn.setStatus = status => {
+    conn.query({
+        tag: 'iq',
+        attrs: {
+            to: '@s.whatsapp.net',
+            type: 'set',
+            xmlns: 'status',
+        },
+        content: [
+            {
+                tag: 'status',
+                attrs: {},
+                content: Buffer.from(status, 'utf-8'),
+            },
+        ],
+    });
+    return status;
+};
+conn.serializeM = mek => sms(conn, mek, store);
+}
+
+// ✅ Redirect root to status page
+app.get("/", (req, res) => {
+  res.redirect("/status");
 });
 
 // ✅ Add status check route before app.listen
 app.get("/status", (req, res) => {
-  res.json({ status: global.botStatus });
+  res.json({ status: global.botStatus || "unknown" });
 });
 
 app.listen(port, () => console.log(`Server listening on port http://localhost:${port}`));
 
 setTimeout(() => {
-  connectToWA()
+  connectToWA();
 }, 4000);
