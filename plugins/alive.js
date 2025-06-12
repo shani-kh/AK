@@ -24,7 +24,7 @@ async (conn, mek, m, { from, sender, reply }) => {
 │💾 *RAM:* ${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)}MB / ${(os.totalmem() / 1024 / 1024).toFixed(2)}MB
 │🖥️ *Host:* ${os.hostname()}
 │⌛ *Uptime:* ${runtime(process.uptime())}
-╰────────────────────◉
+╰─────────────◉
 > ${config.DESCRIPTION}`;
 
         await conn.sendMessage(from, {
