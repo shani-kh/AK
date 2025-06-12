@@ -14,21 +14,17 @@ cmd({
 async (conn, mek, m, { from, sender, reply }) => {
     try {
         const status = `
-┏━━━━━━━━━━━━━━━⬣
-┃     ⚡ *DIGITAL LOK ONLINE* ⚡
-┗━━━━━━━━━━━━━━━⬣
+🌐 *SHABAN MD SYSTEM STATUS*
 
-✅ *Bot Status:* 𝗔𝗖𝗧𝗜𝗩𝗘 & 𝗥𝗘𝗦𝗣𝗢𝗡𝗗𝗜𝗡𝗚
-👑 *Owner:* ${config.OWNER_NAME}
-🧩 *Version:* 3.0.0
-🎯 *Mode:* [${config.MODE}]
-🎛️ *Prefix:* [${config.PREFIX}]
-💾 *RAM:* ${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)}MB / ${(os.totalmem() / 1024 / 1024).toFixed(2)}MB
-🖥️ *Host:* ${os.hostname()}
-⏱️ *Uptime:* ${runtime(process.uptime())}
-
-🔗 *Powered by:* 𝗗𝗜𝗚𝗜𝗧𝗔𝗟 𝗟𝗢𝗞
-┗━━━━━━━━━━━⬣`;
+✅ *Status:* Active & Online  
+👑 *Owner:* ${config.OWNER_NAME}  
+🧩 *Version:* 3.0.0  
+🎯 *Mode:* ${config.MODE}  
+🎛️ *Prefix:* ${config.PREFIX}  
+💾 *RAM Usage:* ${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)}MB / ${(os.totalmem() / 1024 / 1024).toFixed(2)}MB  
+🖥️ *Host:* ${os.hostname()}  
+⏱️ *Uptime:* ${runtime(process.uptime())}  
+${config.DESCRIPTION}`;
 
         await conn.sendMessage(from, {
             image: { url: config.MENU_IMAGE_URL },
@@ -39,7 +35,7 @@ async (conn, mek, m, { from, sender, reply }) => {
                 isForwarded: true,
                 forwardedNewsletterMessageInfo: {
                     newsletterJid: '120363358310754973@newsletter',
-                    newsletterName: 'SHABAN MD',
+                    newsletterName: 'MR-SHABAN⁴⁰',
                     serverMessageId: 143
                 }
             }
