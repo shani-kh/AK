@@ -17,7 +17,7 @@ async (conn, mek, m, { from, isGroup, isAdmins, isBotAdmins, reply }) => {
         if (!isBotAdmins) return reply("❌ I need to be an admin to lock the group.");
 
         await conn.groupSettingUpdate(from, "locked");
-        reply("✅ Group has been locked. New members cannot join.");
+        reply("✅ Group has been locked. group settings changed only admins.");
     } catch (e) {
         console.error("Error locking group:", e);
         reply("❌ Failed to lock the group. Please try again.");
